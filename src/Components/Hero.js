@@ -2,7 +2,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import '../Components/Hero.css'; // Import your CSS styles
-import heroImage from './Imgs/hero.jpg'; // Replace with your image path
+import heroImage from './Imgs/hero.webp'; // Replace with your image path
 
 const Hero = () => {
     return (

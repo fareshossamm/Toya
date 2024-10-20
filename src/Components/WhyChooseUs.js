@@ -1,7 +1,7 @@
 // WhyChooseUs.js
 import React from 'react';
 import './WhyChooseUs.css'; // Import your CSS styles
-import chooseUsImage from './Imgs/why.jpg'; // Replace with your image path
+import chooseUsImage from './Imgs/why.webp'; // Replace with your image path
 import { Container, Row, Col } from 'react-bootstrap'; // Import Bootstrap Container, Row, and Col
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; // Import FontAwesome
 import {
@@ -14,6 +14,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons'; // Import icons
 
 const WhyChooseUs = () => {
+  
   const features = [
     {
       icon: faGraduationCap,
@@ -44,10 +45,10 @@ const WhyChooseUs = () => {
   return (
     <Container fluid className="choose-us-section">
       <Row className="align-items-center">
-      <Col xs={12} md={6} className="choose-us-image" data-aos="fade-down" data-aos-duration="800">
+      <Col xs={12} md={6} className="choose-us-image" data-aos="fade-up" data-aos-duration="1000">
           <img src={chooseUsImage} alt="Why Choose Us" />
         </Col>
-        <Col xs={12} md={6} className="choose-us-content" data-aos="fade-up" data-aos-duration="800">
+        <Col xs={12} md={6} className="choose-us-content" data-aos="fade-down" data-aos-duration="1000">
           <h2 className="choose-us-title">Why Choose Us?</h2>
           <ul className="choose-us-list">
             {features.map((feature, index) => (

@@ -64,6 +64,7 @@
 
   .choose-us-title {
     font-size: 1.6rem; /* Adjust title size for extra small screens */
+    margin-top: 32px;
   }
 
   .choose-us-item {

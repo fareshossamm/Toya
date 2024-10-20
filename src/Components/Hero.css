@@ -165,6 +165,10 @@
     .btns {
         gap: 15px; /* Adjust gap between buttons */
     }
+    .hero-image {
+        max-width: 100%; 
+      
+    }
 }
 
 @media (max-width: 768px) {

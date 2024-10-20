@@ -1,0 +1,124 @@
+/* Reviews.css */
+
+/* Center the testimonials section */
+.testimonial-section {
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically if needed */
+  margin: 50px auto; /* Center the section */
+  max-width: 800px; /* Set a maximum width for the section */
+  padding: 20px; /* Add some padding */
+}
+.testimonial-section h2 {
+  margin-bottom: 55px;
+}
+/* Centering text inside the testimonial */
+.testimonial-content {
+  text-align: center; /* Center text inside each testimonial */
+}
+
+/* Optional: Style for the Swiper */
+.mySwiper {
+  width: 100%; /* Make the swiper take full width of the section */
+}
+
+/* Optional: Make the slide content responsive */
+.testimonial-slide {
+  padding: 10px; /* Add some padding around the slide */
+}
+
+/* Adjust the testimonial image */
+.testimonial-image {
+  width: 80px; /* Example size for the image */
+  height: 80px; /* Maintain aspect ratio */
+  border-radius: 50%; /* Make the image round */
+}
+/* About.css */
+
+/* Ensure to define styles for the parent Swiper component */
+.mySwiper {
+  position: relative; /* Needed for absolute positioning of arrows */
+}
+
+/* Style for the next button */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #fff; /* Change the color as needed */
+  background-color: #3E9A73; 
+  border-radius: 50%; /* Round shape */
+  width: 40px; /* Width of the arrow button */
+  height: 40px; /* Height of the arrow button */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10; /* Make sure they are on top */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+/* Change the background color on hover */
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color: #3E9A73; 
+}
+
+/* Additional styles for the arrows */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 20px; /* Font size for the arrow icon */
+}
+
+/* Position the arrows */
+.swiper-button-next {
+  right: 10px; /* Position from the right */
+}
+
+.swiper-button-prev {
+  left: 10px; /* Position from the left */
+}
+/* Reviews.css */
+
+/* Style for the Swiper pagination bullets */
+.swiper-pagination {
+  display: flex; /* Align bullets horizontally */
+  justify-content: center; /* Center bullets */
+  margin-top: 10px; /* Space between the Swiper and bullets */
+}
+
+.swiper-pagination-bullet {
+  background: #777; /* Change bullet color */
+  opacity: 1; /* Make the active state more visible */
+  width: 12px; /* Width of the bullet */
+  height: 12px; /* Height of the bullet */
+  margin: 0 5px; /* Space between bullets */
+  border-radius: 50%; /* Make bullets round */
+  transition: background 0.3s ease; /* Add a transition for hover effects */
+}
+
+.swiper-pagination-bullet-active {
+  background: #3E9A73; /* Active bullet color */
+}
+
+/* Optional: Hover effect for bullets */
+.swiper-pagination-bullet:hover {
+  background: #3E9A73; /* Change color on hover */
+}
+/* Reviews.css */
+
+/* Style for the stars */
+.star {
+  color: rgb(244, 244, 4); /* Change the color to yellow */
+  margin: 0 2px; /* Space between stars */
+}
+.testimonial-name{
+  margin-bottom: 25px;
+}
+/* Reviews.css */
+
+/* Hide Swiper navigation arrows on small screens */
+@media (max-width: 768px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none !important; /* Use !important to ensure it overrides any other styles */
+  }
+}

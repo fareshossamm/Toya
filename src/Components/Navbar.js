@@ -1,3 +1,4 @@
+// src/Components/Navbar.js
 import React, { useEffect, useRef, useState } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import './Navbar.css';
@@ -7,21 +8,18 @@ const Navbar = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const navbarRef = useRef(null);
 
-  // Function to handle toggling the navbar
   const handleNavToggle = () => {
     setIsNavOpen(prevState => !prevState);
   };
 
-  // Function to collapse the navbar on link click
   const handleNavLinkClick = () => {
     setIsNavOpen(false); // Close the navbar
   };
 
-  // Handle clicks outside the navbar
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (navbarRef.current && !navbarRef.current.contains(event.target)) {
-        setIsNavOpen(false); // Close the navbar if clicking outside
+        setIsNavOpen(false);
       }
     };
 
