@@ -6,7 +6,7 @@
   flex-direction: column; /* Stack children vertically */
   align-items: center; /* Center horizontally */
   justify-content: center; /* Center vertically if needed */
-  margin: 50px auto; /* Center the section */
+  margin: 100px auto 50px; /* Center the section */
   max-width: 800px; /* Set a maximum width for the section */
   padding: 20px; /* Add some padding */
 }
