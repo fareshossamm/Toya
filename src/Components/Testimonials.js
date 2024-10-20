@@ -15,21 +15,19 @@ const About = () => {
 
   const testimonials = [
     {
-      quote: "Toya transformed our business with innovative solutions!",
+      quote: "I've been using Toya products for a few months now, and I can confidently say they are top-notch! The quality is exceptional, and the design is both modern and functional. I love how they combine aesthetics with usability. Every piece feels thoughtfully crafted, making my daily routine so much easier. Highly recommend!",
       name: "Alice Johnson",
-      company: "Creative Agency",
       image: testimonialImage,
       rating: 5
     },
     {
-      quote: "Exceptional service and a great team to work with!",
+      quote: "Toya's customer service is truly outstanding. I had a question about my order, and their team responded promptly and helped me resolve my issue with a friendly attitude. It's refreshing to see a company that genuinely cares about its customers. I'm impressed and will definitely be a repeat customer!",
       name: "Bob Smith",
-      company: "Tech Innovations",
       image: testimonialImage,
       rating: 4
     },
     {
-      quote: "Their creativity knows no bounds. Highly recommended!",
+      quote: "As a busy parent, I’m always looking for products that simplify my life, and Toya has delivered! Their innovative solutions have made such a difference in our household. From organizing toys to versatile storage options, everything is designed with practicality in mind. Toya has quickly become a brand I trust for quality and convenience!",
       name: "Charlie Brown",
       company: "Design Co.",
       image: testimonialImage,
@@ -38,7 +36,7 @@ const About = () => {
   ];
 
   return (
-    <div className="about-container">
+    <div className="testimonial-container">
       {/* Other sections */}
 
       {/* Testimonials Section */}

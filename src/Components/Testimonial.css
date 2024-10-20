@@ -1,17 +1,21 @@
-/* Reviews.css */
-
+.testimonial-container{
+  margin-top: 100px;
+}
 /* Center the testimonials section */
 .testimonial-section {
   display: flex;
   flex-direction: column; /* Stack children vertically */
   align-items: center; /* Center horizontally */
   justify-content: center; /* Center vertically if needed */
-  margin: 100px auto 50px; /* Center the section */
+  margin: 50px auto 50px; /* Center the section */
   max-width: 800px; /* Set a maximum width for the section */
   padding: 20px; /* Add some padding */
+  cursor: pointer;
 }
 .testimonial-section h2 {
   margin-bottom: 55px;
+  font-size: 40px;
+  font-weight: bold;
 }
 /* Centering text inside the testimonial */
 .testimonial-content {
@@ -70,7 +74,7 @@
 
 /* Position the arrows */
 .swiper-button-next {
-  right: 10px; /* Position from the right */
+  right: 0px; /* Position from the right */
 }
 
 .swiper-button-prev {
@@ -107,7 +111,7 @@
 
 /* Style for the stars */
 .star {
-  color: rgb(244, 244, 4); /* Change the color to yellow */
+  color: #FFD700; /* Gold */
   margin: 0 2px; /* Space between stars */
 }
 .testimonial-name{
@@ -116,9 +120,8 @@
 /* Reviews.css */
 
 /* Hide Swiper navigation arrows on small screens */
-@media (max-width: 768px) {
   .swiper-button-next,
   .swiper-button-prev {
     display: none !important; /* Use !important to ensure it overrides any other styles */
   }
-}
+

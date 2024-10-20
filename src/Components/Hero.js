@@ -30,7 +30,7 @@ const Hero = () => {
                 </div>
               </div>
     
-              <div className="col-lg-6 col-md-12 hero-img-container" data-aos="fade-left" data-aos-duration="800">
+              <div className="col-lg-6 col-md-12 hero-img-container" data-aos="fade-left" data-aos-duration="600">
                 <img
                   src={heroImage}
                   alt="Fares Hossam - Frontend Developer"
