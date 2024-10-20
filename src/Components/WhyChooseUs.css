@@ -1,0 +1,72 @@
+/* WhyChooseUs.css */
+.choose-us-section {
+  display: flex; /* Use flexbox for layout */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  padding: 2rem; /* Add padding */
+}
+
+.choose-us-title {
+  font-size: 35px; /* Title font size */
+  margin-bottom: 30px; /* Space below the title */
+  text-align: left; /* Align title to the left */
+  color: #3E9A73;
+}
+
+.choose-us-list {
+  list-style-type: none; /* Remove default list styles */
+  padding-left: 0; /* Remove padding */
+}
+
+.choose-us-item {
+  font-size: 1.1rem; /* Item font size */
+  margin-bottom: 1rem; /* Space between list items */
+  position: relative; /* Positioning for custom bullet */
+  display: flex; /* Flex layout for icon and text */
+  align-items: center; /* Center items vertically */
+  text-align: left;
+}
+
+.choose-us-icon {
+  margin-right: 10px; /* Space between icon and text */
+  color: #3E9A73; /* Icon color */
+  font-size: 1.5rem; /* Icon size */
+}
+
+.choose-us-image img {
+  width: 100%; /* Make image responsive */
+  max-width: 450px; /* Max width for larger screens */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 12px; /* Rounded corners */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .choose-us-section {
+    flex-direction: column; /* Stack content on smaller screens */
+    padding: 1rem; /* Adjust padding */
+  }
+
+  .choose-us-title {
+    font-size: 1.8rem; /* Adjust title size for tablet screens */
+    text-align: center; /* Center title for better visibility */
+  }
+
+  .choose-us-item {
+    text-align: left; /* Align text left for larger screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .choose-us-section {
+    flex-direction: column-reverse; /* Change the order for smaller screens */
+  }
+
+  .choose-us-title {
+    font-size: 1.6rem; /* Adjust title size for extra small screens */
+  }
+
+  .choose-us-item {
+    font-size: 1rem; /* Adjust item font size for extra small screens */
+  }
+}

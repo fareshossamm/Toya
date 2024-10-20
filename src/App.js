@@ -1,24 +1,34 @@
-import logo from './logo.svg';
+// index.js or App.js
+import React from 'react';
+// In your src/index.js or src/App.js
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js'; // This includes Popper.js as well
+import 'aos/dist/aos.css'; // Import AOS styles
+import AOS from 'aos'; // Import AOS
+import { BrowserRouter as Router, Routes } from 'react-router-dom';
+import Navbar from './Components/Navbar';
+
+import Hero from './Components/Hero'; // Import Hero component
 import './App.css';
+import WhyChooseUs from './Components/WhyChooseUs';
 
 function App() {
+  // Initialize AOS
+  React.useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Navbar />
+        <Hero /> 
+        <WhyChooseUs /> 
+        <Routes>
+         
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
