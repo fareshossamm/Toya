@@ -84,12 +84,11 @@
 }
 
 @media (max-width: 768px) {
-  .language-toggle{
+  .language-toggle-container .language-toggle{
+margin: auto;
 margin-top: 10px;
-  }
-  
- 
-}
+
+  }}
 .language-icon {
   margin-right: 5px;
 }
