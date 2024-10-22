@@ -1,0 +1,87 @@
+/* Updated BlogPage.css */
+.blog-page {
+    padding: 60px 20px;
+    background-color: #eef2f3; 
+    margin-top: 70px;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #333; /* Primary color for section title */
+    font-weight: bold;
+}
+
+.blogs-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.blog-post {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add box-shadow transition */
+}
+
+.blog-post:hover {
+    transform: translateY(-3px); /* Subtle lift on hover */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Slightly enhanced shadow on hover */
+}
+
+.blog-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-bottom: 5px solid #3E9A73; /* Border for image separation */
+}
+
+.blog-content {
+    padding: 20px;
+}
+
+.blog-title {
+    font-size: 22px;
+    font-weight: bolder;
+    color: #333;
+    margin: 10px 0;
+    line-height: 1.2; /* Improve line height for better readability */
+}
+
+.blog-description {
+    font-size: 1rem;
+    color: #555; /* Slightly darker gray for better contrast */
+    line-height: 1.6; /* Increased line height for comfort */
+    margin-bottom: 15px;
+}
+
+.read-more {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold; /* Make the button text stand out */
+    transition: background-color 0.3s ease;
+}
+
+.read-more:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+@media (max-width: 1200px) {
+    .blogs-container {
+        grid-template-columns: repeat(2, 1fr); /* Two columns on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .blogs-container {
+        grid-template-columns: 1fr; /* Single column on small screens */
+    }
+}

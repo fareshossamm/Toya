@@ -29,7 +29,6 @@ const About = () => {
     {
       quote: "As a busy parent, I’m always looking for products that simplify my life, and Toya has delivered! Their innovative solutions have made such a difference in our household. From organizing toys to versatile storage options, everything is designed with practicality in mind. Toya has quickly become a brand I trust for quality and convenience!",
       name: "Charlie Brown",
-      company: "Design Co.",
       image: testimonialImage,
       rating: 5
     },

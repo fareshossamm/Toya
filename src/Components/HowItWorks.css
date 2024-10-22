@@ -1,0 +1,100 @@
+.how-it-works {
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+  margin-top: 70px;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #333;
+  font-weight: bold;
+}
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 35px;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: bolder;
+  }
+}
+.steps-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);  /* Three columns */
+  gap: 20px;
+}
+
+.step {
+  background: linear-gradient(135deg, #b2ffda 0%, #f2fef7 100%); /* Gradient background */
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  position: relative;
+  transition: 0.8s ease;
+  overflow: hidden;
+}
+
+.step::before, .step::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 0%;
+  background-color: #007bff;
+  transition: height 0.4s ease;
+  z-index: 1;
+}
+
+.step::before {
+  left: 0;
+  top: 0;
+}
+
+.step::after {
+  right: 0;
+  top: 0;
+}
+
+.step:hover::before, .step:hover::after {
+  height: 100%;  /* Animate the height of the left and right borders */
+}
+
+.step:hover {
+  transform: translateY(-10px);  /* Move the card up slightly */
+}
+
+.step-icon {
+  font-size: 3rem;
+  color: #007bff;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.step-title {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 2;
+}
+
+.step-description {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 1200px) {
+  .steps-container {
+    grid-template-columns: repeat(2, 1fr);  /* Two columns on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .steps-container {
+    grid-template-columns: 1fr;  /* Single column on small screens */
+  }
+}

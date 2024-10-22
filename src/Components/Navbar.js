@@ -55,7 +55,7 @@ const Navbar = () => {
             <NavLink className="nav-link" to="/about" smooth={true} duration={500} onClick={handleNavLinkClick}>About</NavLink>
           </li>
           <li className="nav-item">
-            <NavLink className="nav-link" to="/projects" smooth={true} duration={500} onClick={handleNavLinkClick}>Blogs</NavLink>
+            <NavLink className="nav-link" to="/blogs" smooth={true} duration={500} onClick={handleNavLinkClick}>Blogs</NavLink>
           </li>
           <li className="nav-item">
             <NavLink className="nav-link" to="/how-it-works" smooth={true} duration={500} onClick={handleNavLinkClick}>How It Works</NavLink>
