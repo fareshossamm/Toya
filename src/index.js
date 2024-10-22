@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 // In your src/index.js or src/App.js
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'; // This includes Popper.js as well
+import './i18n'; // Import the i18n configuration
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

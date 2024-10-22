@@ -3,6 +3,7 @@
   background-color: #f9f9f9;
   text-align: center;
   margin-top: 70px;
+  direction: rtl; /* Set direction to right-to-left for Arabic */
 }
 
 .section-title {
@@ -11,6 +12,7 @@
   color: #333;
   font-weight: bold;
 }
+
 @media (max-width: 768px) {
   .section-title {
     font-size: 35px;
@@ -19,6 +21,7 @@
     font-weight: bolder;
   }
 }
+
 .steps-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);  /* Three columns */
@@ -35,7 +38,8 @@
   overflow: hidden;
 }
 
-.step::before, .step::after {
+.step::before,
+.step::after {
   content: "";
   position: absolute;
   width: 2px;
@@ -46,16 +50,17 @@
 }
 
 .step::before {
-  left: 0;
+  right: 0; /* Adjust to start from the right */
   top: 0;
 }
 
 .step::after {
-  right: 0;
+  left: 0; /* Adjust to start from the right */
   top: 0;
 }
 
-.step:hover::before, .step:hover::after {
+.step:hover::before,
+.step:hover::after {
   height: 100%;  /* Animate the height of the left and right borders */
 }
 
@@ -97,4 +102,12 @@
   .steps-container {
     grid-template-columns: 1fr;  /* Single column on small screens */
   }
+}
+.step-number {
+  font-size: 22px; /* Adjust font size as needed */
+  color: #333; /* Color for the number, matches the icon */
+  position: absolute; /* Position it at the bottom */
+  bottom: 15px; /* Adjust bottom spacing */
+  right: 15px; /* Adjust right spacing */
+  font-weight: bold; /* Make the number bold */
 }

@@ -1,10 +1,9 @@
-/* src/components/Nav.css */
-
 .logo {
   width: 50px;
   margin-left: 25px;
 }
-.logotext{
+
+.logotext {
   color: #3E9A73;
   font-size: 25px;
   font-weight: bold;
@@ -12,8 +11,8 @@
 
 .navbar {
   background-color: #ffffff;
-
 }
+
 .navbar .nav-link {
   color: #2D2D2D;
   font-size: 20px;
@@ -28,46 +27,92 @@
 }
 
 .navbar .nav-link.active {
-  color: #3E9A73; /* Black color for active link */
+  color: #3E9A73;
 }
+
 @media (max-width: 992px) {
   .navbar .nav-link {
     padding-left: 25px;
-
   }
-  .navbar-toggler{
-    background:white;
+  
+  .navbar-toggler {
+    background: white;
     margin-right: 50px;
-
   }
- 
 }
+
 @media (max-width: 768px) {
   .navbar .nav-link {
     padding-left: 25px;
-    font-size:16px;
+    font-size: 16px;
     font-weight: 500;
-
   }
-  .navbar-toggler{
+  
+  .navbar-toggler {
     margin-right: 20px;
-
   }
+  
   .logo {
     width: 100px;
     margin-left: 0;
   }
+}
+
+.navbar-toggler {
+  box-shadow: none;
+}
+
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.language-toggle-container .language-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  margin-right: 15px;
+  background-color: #3E9A73;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 20px;
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.2s;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .language-toggle{
+margin-top: 10px;
+  }
   
  
 }
-/* Navbar.css */
-
-.navbar-toggler {
-  box-shadow: none; /* Remove box shadow */
+.language-icon {
+  margin-right: 5px;
+}
+/* Add to your Navbar.css */
+.navbar {
+  direction: ltr; /* Default for English */
 }
 
-/* Optional: Add styles for when the toggler is active */
-.navbar-toggler:focus {
-  outline: none; /* Remove default focus outline if needed */
-  box-shadow: none; /* Ensure no shadow on focus */
+.rtl {
+  direction: rtl; /* For Arabic */
+}
+
+.language-toggle-container {
+  margin-right: 10px; /* Adjust margin if needed */
+}
+/* Add this to your Navbar.css */
+.navbar-nav {
+  display: flex; /* Ensure items are displayed in a flex container */
+  justify-content: flex-start; /* Align items to the start (left in LTR, right in RTL) */
+  direction: ltr; /* Default direction */
+}
+
+.navbar-nav.rtl {
+  direction: rtl; /* Change direction for Arabic */
+  justify-content: flex-end; /* Align items to the end (right in RTL) */
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import './BlogPage.css'; // Import your CSS file
 import img1 from './Imgs/img.png'; 
 import img2 from './Imgs/hero.webp'; 
@@ -7,58 +8,62 @@ import img4 from './Imgs/Happy Child with Teddy Bear.jpg';
 import img5 from './Imgs/daughter-spending-time-with-her-father-home.webp'; 
 import img6 from './Imgs/why.webp'; 
 
-const blogPosts = [
-  {
-    id: 1,
-    title: 'The Power of Interactive Play in Child Development',
-    description: 'Discover how interactive play with smart toys like Toya enhances cognitive abilities, builds emotional intelligence, and strengthens social skills, turning playtime into a key part of your child’s development.',
-    image: img1,
-  },
-  {
-    id: 2,
-    title: 'How Smart Toys Can Encourage Emotional Growth in Children',
-    description: 'Smart toys like Toya are changing the way children learn by making education interactive, engaging, and fun. Explore how technology is helping kids develop essential skills in new and exciting ways.',
-    image: img2,
-  },
-  {
-    id: 3,
-    title: 'Integrating Smart Toys in Early Education',
-    description: 'Discover how smart toys like Toya are shaping the future of early education by making learning fun, interactive, and personalized to your child’s needs.',
-    image: img3,
-  },
-  {
-    id: 4,
-    title: 'Fostering Social Skills with Toya’s Conversations',
-    description: 'Toya does more than entertain—it helps children develop social skills by engaging them in meaningful dialogues. Learn how this smart toy prepares kids for real-world interactions.',
-    image: img4,
-  },
-  {
-    id: 5,
-    title: 'The Role of Technology in Modern Parenting',
-    description: 'Technology isn’t just for adults—smart toys are reshaping how we approach parenting. Discover tips on how to integrate interactive tech like Toya into your parenting routine for better communication and learning.',
-    image: img5,
-  },
-  {
-    id: 6,
-    title: 'Encouraging Creativity in Children with Toya',
-    description: 'Unlock your child’s creative potential! See how Toya encourages imagination and creative thinking through storytelling, problem-solving, and role-playing games.',
-    image: img6,
-  },
-];
-
+const blogImages = [img1, img2, img3, img4, img5, img6];
 
 const BlogPage = () => {
+  const { t, i18n } = useTranslation(); // Initialize translation and i18n
+
+  const blogPosts = [
+    {
+      id: 1,
+      title: t('blogs.blogPost1.title'),
+      description: t('blogs.blogPost1.description'),
+      image: blogImages[0],
+    },
+    {
+      id: 2,
+      title: t('blogs.blogPost2.title'),
+      description: t('blogs.blogPost2.description'),
+      image: blogImages[1],
+    },
+    {
+      id: 3,
+      title: t('blogs.blogPost3.title'),
+      description: t('blogs.blogPost3.description'),
+      image: blogImages[2],
+    },
+    {
+      id: 4,
+      title: t('blogs.blogPost4.title'),
+      description: t('blogs.blogPost4.description'),
+      image: blogImages[3],
+    },
+    {
+      id: 5,
+      title: t('blogs.blogPost5.title'),
+      description: t('blogs.blogPost5.description'),
+      image: blogImages[4],
+    },
+    {
+      id: 6,
+      title: t('blogs.blogPost6.title'),
+      description: t('blogs.blogPost6.description'),
+      image: blogImages[5],
+    },
+  ];
+
   return (
     <div className="blog-page">
-      <h1 className="section-title">Our Blogs</h1>
+      <h1 className="section-title">{t('blogs.sectionTitle')}</h1>
       <div className="blogs-container">
         {blogPosts.map((post) => (
           <div className="blog-post" key={post.id}>
             <img src={post.image} alt={post.title} className="blog-image" />
             <div className="blog-content">
               <h2 className="blog-title">{post.title}</h2>
-              <p className="blog-description">{post.description}</p>
-              
+              <p className="blog-description" style={{ fontSize: i18n.language === 'ar' ? '22px' : 'inherit' }}>
+                {post.description}
+              </p>
             </div>
           </div>
         ))}
