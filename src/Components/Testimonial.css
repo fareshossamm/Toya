@@ -17,6 +17,11 @@
   font-size: 40px;
   font-weight: bold;
 }
+@media (max-width: 768px) {
+  .testimonial-section h2 {
+    font-size: 30px;
+  }
+}
 /* Centering text inside the testimonial */
 .testimonial-content {
   text-align: center; /* Center text inside each testimonial */
