@@ -21,6 +21,7 @@ const Navbar = () => {
   const toggleLanguage = () => {
     const newLanguage = i18n.language === 'en' ? 'ar' : 'en';
     i18n.changeLanguage(newLanguage); // Change the language using i18next
+    handleNavLinkClick(); // Close the navbar when the language is changed
   };
 
   useEffect(() => {
