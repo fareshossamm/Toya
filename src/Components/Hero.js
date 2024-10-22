@@ -4,9 +4,18 @@ import { useTranslation } from 'react-i18next'; // Import useTranslation hook
 import '../Components/Hero.css'; // Import your CSS styles
 import heroImage from './Imgs/hero.webp'; // Replace with your image path
 
+// Track Google Analytics events
+const trackEvent = (action, category, label) => {
+  window.gtag('event', action, {
+    event_category: category,
+    event_label: label,
+    value: 1, // You can also set a value if needed
+  });
+};
+
 const Hero = () => {
   const { t, i18n } = useTranslation(); // Initialize translation and language detection
-  
+
   // Check if the current language is Arabic
   const isArabic = i18n.language === 'ar';
 
@@ -19,13 +28,18 @@ const Hero = () => {
             <h2 className="hero-title">
               {t('hero.title')}
             </h2>
-            
-            <h4 className="desc"style={{ fontSize: i18n.language === 'ar' ? '25px' : 'inherit' }}>
+
+            <h4 className="desc" style={{ fontSize: i18n.language === 'ar' ? '25px' : 'inherit' }}>
               {t('hero.description')}
             </h4>
-            
+
             <div className="btns">
-              <Link to="/contact" className="hero-button" id='buy'>
+              <Link
+                to="/contact"
+                className="hero-button"
+                id='buy'
+                onClick={() => trackEvent('click', 'button', 'Buy Now Button')}
+              >
                 {t('hero.buyNow')}
               </Link>
               <Link to="/contact" className="hero-button" id='contact'>

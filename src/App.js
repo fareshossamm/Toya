@@ -11,6 +11,7 @@ import WhyChooseUs from './Components/WhyChooseUs';
 import AboutUs from './Components/AboutUs'; 
 import HowItWorks from './Components/HowItWorks'; 
 import BlogPage from './Components/BlogPage'; 
+import GoogleAnalytics from './GoogleAnalytics'; // Import the Google Analytics component
 import './App.css';
 
 // Component to scroll to top on route change
@@ -33,8 +34,10 @@ function App() {
   return (
     <Router>
       <div className="App">
+        <GoogleAnalytics /> {/* Include Google Analytics component */}
         <Navbar />
         <ScrollToTop /> {/* Include ScrollToTop component */}
+        
         <Routes>
           {/* Home Page Route */}
           <Route path="/" element={
