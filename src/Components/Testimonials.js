@@ -6,7 +6,9 @@ import { Navigation, Pagination } from 'swiper';
 import 'swiper/swiper-bundle.css'; // or 'swiper/swiper.css' based on your version
 import './Testimonial.css';
 import { FaStar } from 'react-icons/fa';
-import testimonialImage from './Imgs/hero.webp';
+import testimonialImage from './Imgs/rev1.jpg';
+import testimonialImage2 from './Imgs/rev2.jpg';
+import testimonialImage3 from './Imgs/rev3.jpg';
 
 const About = () => {
   useEffect(() => {
@@ -23,13 +25,13 @@ const About = () => {
     {
       quote: "Toya's customer service is truly outstanding. I had a question about my order, and their team responded promptly and helped me resolve my issue with a friendly attitude. It's refreshing to see a company that genuinely cares about its customers. I'm impressed and will definitely be a repeat customer!",
       name: "Bob Smith",
-      image: testimonialImage,
+      image: testimonialImage2,
       rating: 4
     },
     {
       quote: "As a busy parent, I’m always looking for products that simplify my life, and Toya has delivered! Their innovative solutions have made such a difference in our household. From organizing toys to versatile storage options, everything is designed with practicality in mind. Toya has quickly become a brand I trust for quality and convenience!",
       name: "Charlie Brown",
-      image: testimonialImage,
+      image: testimonialImage3,
       rating: 5
     },
   ];

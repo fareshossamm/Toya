@@ -10,7 +10,7 @@
 
 .hero-section {
     display: flex;
-    justify-content: space-between; /* Space between text and image */
+    justify-content: space-between; 
     align-items: center; /* Center content vertically */
     height: 100vh; /* Full viewport height */
     color: #2D2D2D; /* Text color */

@@ -11,7 +11,6 @@ const resources = {
         "contactUs": "Contact Us",
         "imageAlt": "Smart Doll"
       },
-
       "blogs": {
         "sectionTitle": "Our Blogs",
         "blogPost1": {
@@ -70,8 +69,17 @@ const resources = {
       "about": "About",
       "Blogs": "Blogs",
       "how It Works": "How It Works",
-      "contact": "Contact"
-      
+      "contact": "Contact",
+      "whyChooseUs": {
+        "title": "Why Choose Us?",
+        "feature1": "Interactive Learning: Toya blends fun with education, helping kids learn while they play.",
+        "feature2": "Personalized Experience: Tailored interactions that adapt to your child's personality and growth.",
+        "feature3": "Safe & Secure: Designed with top-tier privacy and security for your child’s safety.",
+        "feature4": "Grows with Your Child: Toya evolves with new content as your child develops.",
+        "feature5": "Easy Parental Control: Simple app controls let parents customize and monitor playtime.",
+        "feature6": "Emotional Development: Promotes empathy and communication through engaging conversations.",
+        "imageAlt": "Why Choose Us"
+      }
     }
   },
   ar: {
@@ -82,6 +90,16 @@ const resources = {
         "buyNow": "اشترِ الآن",
         "contactUs": "تواصل معنا",
         "imageAlt": "دمية ذكية"
+      },
+      "whyChooseUs": {
+        "title": "لماذا تختارنا؟",
+        "feature1": "التعلم التفاعلي: تدمج Toya بين المرح والتعليم لمساعدة الأطفال على التعلم أثناء اللعب.",
+        "feature2": "تجربة مخصصة: تفاعلات مصممة تتكيف مع شخصية طفلك ونموه.",
+        "feature3": "آمن ومضمون: مصمم بأعلى مستويات الخصوصية والأمان من أجل سلامة طفلك.",
+        "feature4": "ينمو مع طفلك: تتطور Toya بمحتوى جديد مع تطور طفلك.",
+        "feature5": "سهولة التحكم الأبوي: عناصر تحكم سهلة في التطبيق تتيح للوالدين تخصيص ومراقبة وقت اللعب.",
+        "feature6": "تنمية عاطفية: يعزز التعاطف والتواصل من خلال المحادثات المشوقة.",
+        "imageAlt": "لماذا تختارنا؟"
       },
       "blogs": {
         "sectionTitle": "مدوناتنا",
@@ -109,61 +127,52 @@ const resources = {
           "title": "تشجيع الإبداع لدى الأطفال باستخدام تويا",
           "description": "افتح الباب أمام إبداع طفلك! اكتشف كيف تشجع تويا الخيال والتفكير الإبداعي من خلال سرد القصص وحل المشكلات وألعاب الدور."
         }
-        
       },
       "howItWorks": {
-    "title": "كيف تعمل الدمية",
-    "download": {
-      "title": "قم بتنزيل التطبيق",
-      "description": "ابدأ بتنزيل التطبيق من متجر Google Play أو متجر Apple App Store. التطبيق هو مركز التحكم الخاص بك لإدارة كل شيء من المحادثات إلى التخصيص."
-    },
-    "pair": {
-      "title": "قم بتوصيل الدمية الذكية",
-      "description": "قم بتوصيل الدمية الذكية بهاتفك بسهولة عبر Bluetooth وتخصيص تجربة طفلك."
-    },
-    "customize": {
-      "title": "تخصيص وتعيين التفضيلات",
-      "description": "اختر صوت الدمية ولغتها وشخصيتها. أدخل تفاصيل شخصية مثل اسم طفلك لتعزيز التفاعل."
-    },
-    "monitor": {
-      "title": "المراقبة والتفاعل",
-      "description": "ابقَ في السيطرة مع لوحة القيادة الأبوية. عرض الملخصات، تعيين الحدود، وضمان تفاعلات آمنة."
-    },
-    "enjoy": {
-      "title": "استمتع بتفاعل ممتع وآمن",
-      "description": "دع طفلك يبني علاقة مع الدمية من خلال المحادثات المخصصة والألعاب والتعلم."
-    },
-    "update": {
-      "title": "تحديث وتعزيز التجربة",
-      "description": "قم بتحديث التطبيق بانتظام للوصول إلى ميزات وتحسينات جديدة. ستستمر الدمية الذكية في اكتساب قدرات ومحتويات جديدة، مما يضمن ألا يتوقف المرح أبدًا."
+        "title": "كيف تعمل الدمية",
+        "download": {
+          "title": "قم بتنزيل التطبيق",
+          "description": "ابدأ بتنزيل التطبيق من متجر Google Play أو متجر Apple App Store. التطبيق هو مركز التحكم الخاص بك لإدارة كل شيء من المحادثات إلى التخصيص."
+        },
+        "pair": {
+          "title": "قم بتوصيل الدمية الذكية",
+          "description": "قم بتوصيل الدمية الذكية بهاتفك بسهولة عبر Bluetooth وتخصيص تجربة طفلك."
+        },
+        "customize": {
+          "title": "تخصيص وتعيين التفضيلات",
+          "description": "اختر صوت الدمية ولغتها وشخصيتها. أدخل تفاصيل شخصية مثل اسم طفلك لتعزيز التفاعل."
+        },
+        "monitor": {
+          "title": "المراقبة والتفاعل",
+          "description": "ابقَ في السيطرة مع لوحة المعلومات الخاصة بالوالدين. اعرض الملخصات، وضبط الحدود، وتأكد من التفاعلات الآمنة."
+        },
+        "enjoy": {
+          "title": "استمتع بالتفاعل الممتع والآمن",
+          "description": "دع طفلك يبني علاقة مع الدمية من خلال محادثات مخصصة وألعاب وتجارب تعليمية."
+        },
+        "update": {
+          "title": "قم بالتحديث وتعزيز التجربة",
+          "description": "قم بتحديث التطبيق بانتظام للوصول إلى ميزات جديدة وتحسينات. ستواصل دميتك الذكية اكتساب قدرات ومحتوى جديد، مما يضمن عدم توقف المرح."
+        }
+      },
+      "home": "الرئيسية",
+      "about": "من نحن",
+      "Blogs": "المدونات",
+      "how It Works": "كيف تعمل الدمية",
+      "contact": "تواصل معنا"
     }
-  },
-  
-    "home": "الصفحة الرئيسية",
-    "about": "حول",
-    "Blogs": "مدونات",
-    "how It Works": "كيف تعمل",
-    "contact": "تواصل"
-  
-  
-      
-      
-    }
-    
   }
-  
 };
 
-// Initialize i18next
 i18n
   .use(initReactI18next) // Passes i18n down to react-i18next
   .init({
     resources,
-    lng: 'en', // Default language
-    fallbackLng: 'en',
+    lng: "en", // Default language
+    fallbackLng: "en", // Use English if the translation is not available
     interpolation: {
-      escapeValue: false, // React already escapes by default
-    },
+      escapeValue: false // React already escapes values
+    }
   });
 
 export default i18n;

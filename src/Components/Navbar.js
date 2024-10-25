@@ -63,7 +63,7 @@ const Navbar = () => {
             <NavLink className="nav-link" to="/about" onClick={handleNavLinkClick}>{t('about')}</NavLink>
           </li>
           <li className="nav-item">
-            <NavLink className="nav-link" to="/blogs" onClick={handleNavLinkClick}>{t('Blogs')}</NavLink>
+            <NavLink className="nav-link" to="/Blogs" onClick={handleNavLinkClick}>{t('Blogs')}</NavLink>
           </li>
           <li className="nav-item">
             <NavLink className="nav-link" to="/how-it-works" onClick={handleNavLinkClick}>{t('how It Works')}</NavLink>

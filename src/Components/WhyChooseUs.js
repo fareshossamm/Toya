@@ -1,67 +1,46 @@
-// WhyChooseUs.js
-import React from 'react';
-import './WhyChooseUs.css'; // Import your CSS styles
-import chooseUsImage from './Imgs/why.webp'; // Replace with your image path
-import { Container, Row, Col } from 'react-bootstrap'; // Import Bootstrap Container, Row, and Col
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; // Import FontAwesome
-import {
-  faGraduationCap,
-  faUserCog,
-  faShieldAlt,
-  faChild,
-  faTools,
-  faComments
-} from '@fortawesome/free-solid-svg-icons'; // Import icons
+import React, { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
+import { FaCheckCircle, FaStar, FaUsers, FaThumbsUp, FaClock } from 'react-icons/fa'; // Import icons from the library
+import './WhyChooseUs.css'; // Ensure you have your CSS file
+import Why from './Imgs/why.webp'; // Replace with your image path
 
 const WhyChooseUs = () => {
-  
-  const features = [
-    {
-      icon: faGraduationCap,
-      text: "Interactive Learning: Toya blends fun with education, helping kids learn while they play."
-    },
-    {
-      icon: faUserCog,
-      text: "Personalized Experience: Tailored interactions that adapt to your child's personality and growth."
-    },
-    {
-      icon: faShieldAlt,
-      text: "Safe & Secure: Designed with top-tier privacy and security for your child’s safety."
-    },
-    {
-      icon: faChild,
-      text: "Grows with Your Child: Toya evolves with new content as your child develops."
-    },
-    {
-      icon: faTools,
-      text: "Easy Parental Control: Simple app controls let parents customize and monitor playtime."
-    },
-    {
-      icon: faComments,
-      text: "Emotional Development: Promotes empathy and communication through engaging conversations."
-    }
-  ];
+  const { t, i18n } = useTranslation();
+  const [content, setContent] = useState({});
+
+  useEffect(() => {
+    setContent({
+      title: t('whyChooseUs.title'),
+      features: [
+        { icon: <FaCheckCircle />, text: t('whyChooseUs.feature1') },
+        { icon: <FaStar />, text: t('whyChooseUs.feature2') },
+        { icon: <FaUsers />, text: t('whyChooseUs.feature3') },
+        { icon: <FaThumbsUp />, text: t('whyChooseUs.feature4') },
+        { icon: <FaClock />, text: t('whyChooseUs.feature5') },
+        { icon: <FaCheckCircle />, text: t('whyChooseUs.feature6') },
+      ],
+    });
+  }, [i18n.language, t]);
+
+  const isArabic = i18n.language === 'ar'; // Check if the current language is Arabic
 
   return (
-    <Container fluid className="choose-us-section">
-      <Row className="align-items-center">
-      <Col xs={12} md={6} className="choose-us-image" data-aos="fade-up" data-aos-duration="1000">
-          <img src={chooseUsImage} alt="Why Choose Us" />
-        </Col>
-        <Col xs={12} md={6} className="choose-us-content" data-aos="fade-down" data-aos-duration="1000">
-          <h2 className="choose-us-title">Why Choose Us?</h2>
-          <ul className="choose-us-list">
-            {features.map((feature, index) => (
-              <li key={index} className="choose-us-item">
-                <FontAwesomeIcon icon={feature.icon} className="choose-us-icon" />
-                {feature.text}
-              </li>
-            ))}
-          </ul>
-        </Col>
-      
-      </Row>
-    </Container>
+    <div className={`why-choose-us ${isArabic ? 'rtl' : ''}`}>
+      <div className="section-image">
+        <img src={Why} alt="Why Choose Us" />
+      </div>
+      <div className="section-content">
+        <h2>{content.title}</h2>
+        <div className="features">
+          {content.features && content.features.map((feature, index) => (
+            <div className="feature-item" key={index}>
+              <span className="feature-icon">{feature.icon}</span>
+              <span className="feature-text">{feature.text}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
   );
 };
 
